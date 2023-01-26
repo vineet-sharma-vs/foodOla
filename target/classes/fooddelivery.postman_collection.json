@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "41bacdf7-7654-444f-8217-9b132fd19a64",
+		"name": "fooddelivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19733155"
+	},
+	"item": [
+		{
+			"name": "Get Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"raavanFirse@lanka.com\",\n    \"token\": \"50e93754-5d5c-4c97-870a-8f6d2607c8f7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3200/getProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"getProfile"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "atif",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"raavanFirse@lanka.com\",\n    \"field\":\"name\",\n    \"newValue\":\"Sarphira raavan\",\n    \"token\": \"50e93754-5d5c-4c97-870a-8f6d2607c8f7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3200/editProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"editProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"atif@gmail.com\",\n    \"restaurantId\": 1,\n    \"selectedItems\": [\n        {\n        \"itemId\": 1,\n        \"quantity\": 2\n    }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3200/placeOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"placeOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"paymentMethod\": \"upi\",\n    \"restaurantId\": 1,\n    \"selectedItems\": [\n        {\n        \"itemId\": 1,\n        \"quantity\": 2\n    }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3200/makePayment",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"makePayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"raavan@lanka.com\",\n    \"name\":\"das sar wala raavan\",\n    \"password\":\"lankaKaRaja\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3200/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"raavanFirse@lanka.com\",\n    \"password\":\"lankKaRaja\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3200/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log out",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
